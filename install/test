@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0-only
+
+build() {
+    add_runscript
+    add_binary "$INIT_BINARY" "/usr/bin/switch_root" 755
+
+    add_file "init_functions" "/init_functions"
+    add_file "init" "/init" 755
+}
+
+help() {
+    cat <<HELPEOF
+Test hook for stuff the test suite needs
+HELPEOF
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

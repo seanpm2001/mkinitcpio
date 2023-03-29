@@ -88,6 +88,10 @@ man/%: man/%.adoc Makefile
 check:
 	bats $(BATS_ARGS) test/cases/
 
+
+integration:
+	bats -r $(BATS_ARGS) test/integration/
+
 coverage:
 	kcov \
 		--include-path=$(CURDIR) \

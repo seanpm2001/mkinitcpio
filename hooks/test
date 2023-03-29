@@ -1,0 +1,10 @@
+#!/usr/bin/ash
+# SPDX-License-Identifier: GPL-2.0-only
+
+run_latehook() {
+    mkdir -p /new_root/sbin
+    touch /new_root/sbin/init
+    chmod 755 /new_root/sbin/init
+}
+
+# vim: set ft=sh ts=4 sw=4 et:
